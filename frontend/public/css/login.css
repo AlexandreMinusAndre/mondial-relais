@@ -1,0 +1,9 @@
+@import "_styles.css";
+@import "_themes.css";
+@import "_navbar.css";
+@import "_form.css";
+@import "_footer.css";
+
+main{
+	padding-top: var(--navbarHeight);
+}

@@ -1,0 +1,238 @@
+@import "_styles.css";
+@import "_themes.css";
+@import "_navbar.css";
+@import "_form.css";
+@import "_footer.css";
+
+main{
+	padding-top: var(--navbarHeight);
+}
+
+#map-section {
+	position: relative;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	animation: fadeIn 3s ease-out;
+	overflow: hidden;
+}
+
+.map-container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: .8rem;
+	margin-bottom: 8rem;
+	width: 80rem;
+	height: 60rem;
+	/* border: solid 1px var(--light-gray); */
+	border-radius: .4rem;
+	background-color: var(--white);
+	color: #fefefe;
+	overflow: hidden;
+}
+
+#loading {
+	display: none;
+	position: absolute;
+	height: 6.4rem;
+	width: 6.4rem;
+	object-fit: contain;
+	animation: loading 1s ease-in-out infinite;
+}
+@keyframes loading {
+	0%{
+		opacity: 100%;
+	}
+	50%{
+		opacity: 50%;
+	}
+	100%{
+		opacity: 100%;
+	}
+}
+
+#map {
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+}
+
+.map-overlay {
+	position: absolute;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #29292988;
+	backdrop-filter: blur(8px);
+	animation: fadeIn .3s ease-out;
+	overflow: hidden;
+}
+@keyframes fadeIn {
+	0%{
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+	.pr-card {
+		position: relative;
+		display: flex;
+		flex-flow: column nowrap;
+		width: max-content;
+		height: max-content;
+		background-color: #fefefe;
+		color: #292929;
+		border-radius: .4rem;
+		padding: .8rem;
+	}
+		.pr-card-column {
+			display: flex;
+			flex-flow: column nowrap;
+		}
+		.pr-card-row {
+			display: flex;
+			flex-flow: row nowrap;
+		}
+			.pr-photo {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				min-height: 3.2rem;
+				max-height: 8.6rem;
+				min-width: 3.2rem;
+				max-width: 8.6rem;
+				object-fit: cover;
+				margin: .4rem auto;
+			}
+			.pr-name {
+				font-family : "quicksand", sans-serif;
+				color: var(--main-color);
+				margin: .4rem .8rem;
+			}
+			.pr-address,
+			.pr-distance {
+				display: flex;
+				flex-flow: row wrap;
+				margin: .4rem .8rem;
+				color: #1e1e1e;
+			}
+			.pr-distance {
+				/* Importer un système de géolocalisation avant d'afficher la distance */
+				display: none;
+			}
+			.pr-schedules-box {
+				display: flex;
+				flex-flow: flex wrap;
+				width: max-content;
+				background-color: #d5dee5;
+				border: solid 1px #546a79;
+				margin: .4rem;
+				padding: .8rem;
+				border-radius: .4rem;
+			}
+			.pr-schedule-row {
+				justify-content: space-between;
+			}
+			.pr-day p {
+				color : #1e1e1e;
+			}
+			.pr-schedule p {
+				color : #1e1e1e;
+			}
+			.pr-day {
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: flex-start;
+				padding: .2rem .4rem;
+			}
+			.pr-schedule {
+				display: flex;
+				justify-content: flex-start;
+				padding-left: .8rem;
+			}
+			.pr-schedule p {
+				display: flex;
+				flex-flow: row nowrap;
+				width: max-content;
+				padding: .2rem .8rem;
+			}
+			.pr-schedule-separator {
+				display: flex;
+				flex-grow: 1;
+			}
+			.pr-current-schedule {
+				padding: .8rem;
+			}
+	.closer-container {
+		justify-content: flex-end;
+	}
+	.map-overlay-closer {
+		height: 3.2rem;
+		width: 3.2rem;
+		border: none;
+		background-color: inherit;
+		color: inherit;
+		background-image: url("../img/cross_dark.png");
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		opacity: .5;
+		cursor: pointer;
+		transition: opacity .3s ease-out;
+	}
+	.map-overlay-closer:hover {
+		opacity: .85;
+	}
+
+@media screen and (max-width: 824px) {
+	.container {
+		width: 90vw;
+	}
+
+	.map-container {
+		width: 100%;
+		justify-content: center;
+		border-radius: 0;
+		margin-bottom : 0;
+	}
+	.pr-card {
+		/* width: 100%;
+		height: 100%; */
+		border-radius: none;
+		background-color: #fefefedd;
+		padding: 0;
+	}
+	.map-overlay-closer {
+		height: 6.4rem;
+		width: 6.4rem;
+	}
+		.pr-name,
+		.pr-address{
+			text-align: center;
+		}
+	.pr-card > .pr-card-row:nth-child(2) {
+		flex: 1;
+		flex-flow: column nowrap;
+		align-items: center;
+		justify-content: center;
+	}
+		.pr-card > .pr-card-row:nth-child(2) > .pr-card-column {
+			align-items: center;
+			width: 100%;
+		}
+	.pr-schedules-box {
+		border: none;
+	}
+}
+@media screen and (max-height : 60rem) {
+	.map-container {
+		height: calc(100vh - var(--navbarHeight));
+	}
+}

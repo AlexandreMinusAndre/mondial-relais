@@ -1,0 +1,70 @@
+:root{
+	--main-color : #CE0C4B;
+	--secondary-color : #F55169;
+
+	--white : #fefefe;
+	--black : #1E1E1E;
+	--placeholder : #c4c4c4;
+	--broken-white : #eef0f3;
+	--light-gray : #d5dee5;
+	--medium-gray : #546a79;
+
+	--input-color : #fefefe;
+	--input-focus : #fefefe;
+	--border-color : #E5D5DD;
+
+	--button-color : #CE0C4B;
+	--button-hover : #F55169;
+
+	--footer-color : #CE0C4B;
+}
+.theme-light{
+	--main-color : #CE0C4B;
+	--secondary-color : #F55169;
+
+	--banner-img: url("../img/sky-light.jpeg");
+
+	--white : #fefefe;
+	--black : #1E1E1E;
+	--placeholder : #c4c4c4;
+	--broken-white : #eef0f3;
+	--light-gray : #d5dee5;
+	--medium-gray : #546a79;
+
+	--input-color : var(--white);
+	--input-focus : var(--white);
+	--border-color : #E5D5DD;
+
+	--button-color : var(--main-color);
+	--button-hover : var(--secondary-color);
+
+	--footer-color : var(--main-color);
+	--cpr-color : #1b1b1b;
+}
+
+.theme-dark{
+	/* --main-color : #6495fd;
+	--secondary-color : #8cb1ff; */
+	--main-color : #CE0C4B;
+	--secondary-color : #F55169;
+
+	--banner-img: url("../img/sky-dark.jpeg");
+
+	--white : #1b1b1d;
+	--black : #e5e5e5;
+	
+	--placeholder : #a2a2a2;
+	--broken-white : #353B45;
+	--light-gray : #69697d;
+	--medium-gray : #d5d5d5;
+
+	--input-color : rgba(0,0,0,.15);
+	--input-focus : #4E5561;
+	--border-color : #69697D;
+
+	--button-color : var(--broken-white);
+	--button-hover : var(--main-color);
+
+	--footer-color : rgba(255, 255, 255, .05);
+	--cpr-color : #1b1b1b;
+}

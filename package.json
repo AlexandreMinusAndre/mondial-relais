@@ -1,0 +1,16 @@
+{
+  "name": "mondial-relay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently --raw \"npm run front\" \"npm run back\"",
+    "iall": "concurrently --raw \"npm i\" \"cd frontend && npm i\" \"cd backend && npm i\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.0.0"
+  }
+}

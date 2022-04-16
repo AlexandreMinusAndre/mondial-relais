@@ -1,0 +1,65 @@
+@import "_styles.css";
+@import "_themes.css";
+@import "_navbar.css";
+@import "_form.css";
+@import "_footer.css";
+
+main{
+	padding-top: var(--navbarHeight);
+    padding-bottom: 8rem;
+}
+.response-box {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.response-box p,
+.response-box a{
+    padding: .4rem;
+}
+.response-box a:hover{
+    text-decoration: underline;
+}
+
+.success {
+    font-weight: bold;
+    color: lime;
+}
+.error{
+    font-weight: bold;
+    color: red;
+}
+.flying-envelope {
+    background-image: url("../img/flying_envelope.gif");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 25.6rem;
+    animation: softRotation 8s ease-in-out infinite, levitation 5s ease-in-out infinite;
+}
+
+@keyframes softRotation {
+    0% {
+        transform: rotate(-3deg);
+    }
+    50% {
+        transform: rotate(3deg);
+    }
+    100% {
+        transform: rotate(-3deg);
+    }
+}
+
+@keyframes levitation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(25px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

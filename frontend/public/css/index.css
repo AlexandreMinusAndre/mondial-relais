@@ -1,0 +1,147 @@
+@import "_styles.css";
+@import "_themes.css";
+@import "_navbar.css";
+@import "_footer.css";
+
+main{
+	padding-top: var(--navbarHeight);
+}
+
+.banner{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	height: calc(100vh - var(--navbarHeight));
+	background: linear-gradient(rgba(0, 0, 0, 0) 80%, var(--white)), var(--banner-img);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	backdrop-filter: blur(2px);
+}
+.banner h1 {
+	text-align: center;
+	font-size: 6.4rem;
+	padding: .8rem;
+	color: #fefefe;
+	text-shadow: #292929ee 4px 4px 8px;
+	animation: appearTop 1s ease-out, fadeIn 1s ease-out;
+}
+.banner p {
+	text-align: center;
+	font-size: 3.6rem;
+	color: #fefefe;
+	text-shadow: #292929ee 4px 4px 8px;
+	animation: appearTop 1s ease-out, fadeIn 1s ease-out;
+}
+@keyframes appearTop {
+	0%{
+		transform: translateY(-10px);
+	}
+	100%{
+		transform: translateY(0);
+	}
+}
+@keyframes fadeIn {
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+#introduction{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	min-height: calc(100vh - var(--navbarHeight));
+}
+#introduction h1{
+	text-align: center;
+	padding: 2.4rem .8rem;
+	font-size: 3.8rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: var(--main-color);
+	font-family: "quicksand", serif;
+}
+
+.about-box {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: flex-start;
+	width: 100%;
+	margin: 1.6rem .8rem;
+	padding: 1.6rem;
+	max-width: 96rem;
+}
+
+.about-box h2 {
+	padding: .8rem;
+	margin: .4rem;
+	margin: 1.6rem;
+	width: 100%;
+	border-bottom: solid 1px var(--border-color);
+}
+.about-box p {
+	margin: .8rem 0;
+}
+.about-box ul {
+	padding: 0 1.6rem;
+}
+.about-box li {
+	list-style: disc;
+}
+.about-box a:hover{
+	text-decoration: underline;
+}
+
+.team-row {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	flex: 1;
+	margin: 2.4rem .8rem;
+}
+.team-card-box {
+	display: flex;
+	flex-basis: 33.333333%;
+}
+.team-card{
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: space-between;
+	width: 18rem;
+	height: 24rem;
+	padding: 1.6rem;
+	margin: 1.6rem;
+	background-color: var(--broken-white);
+	border: solid 1px var(--border-color);
+	border-radius: .8rem;
+	box-shadow: #29292933 1px 1px 8px;
+	cursor: pointer;
+}
+.team-card img {
+	width: 12.8rem;
+	height: 12.8rem;
+	object-fit: cover;
+	border-radius: 50%;
+	border: solid 1px var(--border-color);
+}
+.team-card h2 {
+	margin: .8rem;
+	text-align: center;
+}
+.team-card p {
+	text-align: center;
+}
+
+@media screen and (max-width: 824px) {
+	#introduction{
+		width: 90%;
+	}
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mondial Relais - Le relais de Mondial Relay</title>
+	<link rel="icon" href="./img/icon.ico">
+
+	<!-- IMPORTS -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <header>
+		<nav id="navbar">
+			<a class="logo" href="/"></a>
+			<ul>
+				<li><a href="./label.html">Créer une étiquette</a></li>
+				<li><a href="./prsearch.html">Rechercher point relais</a></li>
+				<li><a href="./contact.html">Contact</a></li>
+				<li><a href="./login.html">Connexion</a></li>
+			</ul>
+			<div class="theme-changer"></div>
+			<div class="burger"></div>
+		</nav>
+		<nav id="overlay">
+			<div>
+				<div class="cross"></div>
+			</div>
+			<ul>
+				<li><a href="./label.html">Créer une étiquette</a></li>
+				<li><a href="./prsearch.html">Rechercher point relais</a></li>
+				<li><a href="./contact.html">Contact</a></li>
+				<li><a href="./login.html">Connexion</a></li>
+			</ul>
+		</nav>
+		<div class="banner">
+			<h1>Mondial Relais</h1>
+			<p>Le relais de Mondial Relay</p>
+		</div>
+	</header>
+    <main>
+        <section id="introduction">
+            <h1>À propos</h1>
+			<div class="about-box">
+				<h2>Présentation et utilisation</h2>
+				<p>Mondial Relais est une application web qui facilite le lien entre Mondial Relay et l'utilisateur, d'où le nom de notre entreprise.</p>
+				<p>La problematique que nous avons rencontré est la modernisation des apis de Mondial Relay, qui utilisent un langage de formatage obsolète (le XML). Notre but étant de moderniser tout ça en permettant à l'utilisateur de faire des requêtes à l'api de Mondial Relay dans des formats modernes (JSON, formulaire html), afin d'obtenir des réponses plus simples d'utilisation et intuitives pour l'utilisateur.</p>
+				<p>Notre application possède plusieurs fonctionnalités utilisant l'API de mondial relay :</p>
+				<ul>
+					<li>
+						<p>Créer une étiquette d'expédition Mondial Relay pour vos colis : Pour ce faire, il vous suffit de remplir le formulaire, puis de cliquer sur "Télécharger l'étiquette". Votre étiquette se trouvera ensuite, au format PDF, dans le dossier réceptionnant les téléchargements par défaut sur votre ordinateur.</p>
+					</li>
+					<li>
+						<p>Recherche de point relais : Pour ce faire, rendez vous sur la partie "Recherche point relais" du site, puis remplissez le formulaire qui vous sera présenté. Une fois le bouton de recherche cliqué, une carte apparaîtra avec des points représentant les Mondial Relay. Cliquez sur un point pour afficher les informations du Mondial Relay sélectionné.</p>
+					</li>
+					<li>
+						<p>Nous possédons également une boîte gmail si vous avez des question ou des remarques concernant notre application. Pour ce faire, accédez à la partie "Contact" puis remplissez le formulaire.</p>
+					</li>
+					<li>
+						<p>Une partie de création de compte et connexion est actuellement en cours de développement, merci de votre patience.</p>
+					</li>
+				</ul>
+			</div>
+			<div class="about-box">
+				<h2>Aspect technique</h2>
+				<p>Cette application se base sur l'API officielle de Mondial Relay utilisant des requêtes et réponses au format XML pour créer l'étiquette. En amont, nous avons développé un serveur permettant d'envoyer des requêtes au format JSON, qui seront par la suite convertis au format XML pour faire la requête à l'api de Mondial Relay. Par la suite, le serveur reçoit une réponse XML qui sera convertie en JSON pour faciliter l'exploitation de la réponse.</p>
+			</div>
+			<div class="about-box">
+				<h2>L'équipe</h2>
+				<p>Découvrez l'équipe grâce à qui cette application a pu voir le jour.</p>
+				<div class="team-row">
+					<div class="team-card-box">
+						<div class="team-card">
+							<img src="./img/team/alex.jpeg" alt="Photo">
+							<h3>Alex</h3>
+							<p>Développement Back-end</p>
+						</div>
+					</div>
+					<div class="team-card-box">
+						<div class="team-card">
+							<img src="./img/team/basile.jpeg" alt="Photo">
+							<h3>Basile</h3>
+							<p>Communication</p>
+						</div>
+					</div>
+					<div class="team-card-box">
+						<div class="team-card">
+							<img src="./img/team/dylan.jpeg" alt="Photo">
+							<h3>Dylan</h3>
+							<p>Comunication</p>
+						</div>
+					</div>
+					<div class="team-card-box">
+						<div class="team-card">
+							<img src="./img/team/romain.jpeg" alt="Photo">
+							<h3>Romain</h3>
+							<p>Développement Front-end</p>
+						</div>
+					</div>
+					<div class="team-card-box">
+						<div class="team-card">
+							<img src="./img/team/timothee.jpeg" alt="Photo">
+							<h3>Timothée</h3>
+							<p>Communication</p>
+						</div>
+					</div>
+				</div>
+			</div>
+        </section>
+    </main>
+    <footer>
+		<div class="footer-content">
+			<ul>
+				<h3>Réalisé par</h3>
+				<li><a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/Mobzaaz">Alex</a></li>
+				<li><a target="_blank"rel="nofollow noopener noreferrer"href="https://github.com/desmu">Basile</a></li>
+				<li><a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/Daymortel">Dylan</a></li>
+				<li><a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/NaorimSenchai">Romain</a></li>
+				<li><a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/Bubamara0">Timothée</a></li>
+				<li><a target="_blank" rel="nofollow noopener noreferrer" href="https://i.pinimg.com/originals/76/81/87/7681878bc573c39075babdb7bc07c031.jpg">Un lama</a></li>
+			</ul>
+			<ul>
+				<h3>Nos coordonnées</h3>
+				<li><a target="_blank" rel="nofollow noopener noreferrer" href="tel:+33123456789">01.23.45.67.89</a></li>
+				<li><a target="_blank" rel="nofollow noopener noreferrer" href="mailto:contact.mondialrelais35@gmail.com">contact.mondialrelais35@gmail.com</a></li>
+				<li><a target="_blank" rel="nofollow noopener noreferrer" href="https://www.google.com/maps/place/4+Av.+du+Ch%C3%A2teau+H%C3%A9bert,+35800+Dinard/@48.6393085,-2.0772886,17z/data=!4m5!3m4!1s0x480e80a214395ebf:0x2e0d63d46e88dc02!8m2!3d48.6393085!4d-2.0750999">4, Avenue du Château Hébert 35800 Dinard</a></li>
+			</ul>
+			<ul>
+				<h3>Autres</h3>
+				<li><a href="./cgu.html">Conditions générales d'utilisation (CGU)</a></li>
+			</ul>
+		</div>
+		<div class="copyright">2022 © Team Mondial Relais</div>
+	</footer>
+	<script type="module" src="./js/theme.js"></script>
+	<script type="module" src="./js/burger.js"></script>
+</body>
+</html>

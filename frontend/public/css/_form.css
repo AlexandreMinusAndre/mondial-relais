@@ -1,0 +1,148 @@
+#form-container{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+#form-container h1{
+	text-align: center;
+	padding: 2.4rem .8rem;
+	font-size: 3.8rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: var(--main-color);
+	font-family: "quicksand", serif;
+}
+
+#form-container p{
+	text-align: center;
+	font-family: "quicksand", serif;
+}
+
+form{
+	display: flex;
+	flex-flow: column nowrap;
+	padding: .8rem;
+	background-color: var(--white);
+}
+form a:hover{
+	text-decoration: underline;
+}
+
+form .subform{
+	background-color: var(--broken-white);
+	padding: .8rem;
+	border-radius: .2rem;
+	border: solid 1px var(--border-color);
+}
+
+.separator-row{
+	margin : 2.4rem 0;
+	padding: .8rem;
+	color: var(--medium-gray);
+	border-bottom: solid 1px var(--light-gray);
+}
+
+form .form-row{
+	display: flex;
+	align-items: center;
+}
+form .form-row .input-box{
+	display: flex;
+	flex-flow: column nowrap;
+	flex-grow: 1;
+	padding: .8rem;
+}
+form label{
+	margin-bottom: .4rem;
+	margin-left: .8rem;
+	color: var(--medium-gray);
+}
+form input,
+form select,
+form option,
+form textarea {
+	flex-grow: 1;
+	padding: .8rem;
+	background-color: var(--input-color);
+	border: solid 1px var(--border-color);
+}
+form select[disabled] {
+	color: var(--light-gray);
+}
+form textarea {
+	resize: vertical;
+	min-height: 8rem;
+}
+form input:focus, form input:active,
+form select:focus, form select:active,
+form textarea:focus, form textarea:active {
+	background-color : var(--input-focus);
+}
+
+form .form-column {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: .8rem;
+}
+form .radio-box{
+	display: flex;
+	flex-grow: 1;
+	flex-flow: row nowrap;
+	align-items: center;
+	padding: .4rem .8rem;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.btns-box{
+	padding: 2.4rem 0;
+}
+.btns-box .input-box{
+	flex-basis: 50%;
+}
+
+form input[type="submit"]{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	padding: 1.2 .8rem;
+	margin: 0 auto;
+	background-color: var(--button-color);
+	color: #fefefe;
+	border: none;
+	border-radius: .2rem;
+	cursor: pointer;
+	transition: background-color .4s ease-out;
+}
+form input[type="submit"]:hover{
+	background-color: var(--button-hover);
+}
+
+@media screen and (max-width: 824px) {
+	form .form-row {
+		flex-flow: column nowrap;
+	}
+	form .form-row .input-box {
+		width: 100%;
+	}
+	/* form .input-box > * {
+		margin: 0 auto;
+	} */
+	form .form-row .select-label {
+		margin-left: .8rem;
+	}
+	form .form-row .select-label,
+	form .form-row select {
+		width: 100%;
+	}
+	.btns-box .input-box {
+		flex-basis: inherit;
+	}
+}
