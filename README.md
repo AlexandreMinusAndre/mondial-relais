@@ -7,7 +7,7 @@ La réponse de cette requête par l'API de Mondial Relay renverra donc un script
 
 - [Bubamara0](https://github.com/Bubamara0)
 - [Daymortel](https://github.com/Daymortel)
-- [Alexandre Moins Andre](https://github.com/Mobzaaz)
+- [Alexandre Moins Andre](https://github.com/AlexandreMinusAndre)
 - [NaorimSenchai](https://github.com/NaorimSenchai)
 
 ## Comment s'en servir ?
